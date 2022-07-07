@@ -97,7 +97,7 @@ header{
     color: var(--bg-color);
 }
 section{
-    padding: 110px 15% 0 15%;
+    padding: 15vh 15% 10vh 15%;
 }
 .home{
     min-height: 100vh;
@@ -108,6 +108,7 @@ section{
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     align-items: center;
     grid-gap: 4rem;
 }
@@ -169,10 +170,14 @@ section{
 .ctmbtn:hover{
     transform: scale(1.1);
 }
+.home-img{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
 .home-img img{
-    width: 540px;
+    width: 80%;
     height: auto;
-    max-width: 100%;
     border-radius: 1%;
 }
 .about{
@@ -364,7 +369,7 @@ header.sticky{
         display: block;
     }
     .home{
-        min-height: 80vh;
+        min-height: 100vh;
     }
     .navlist{
         position: absolute;
