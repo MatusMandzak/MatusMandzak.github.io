@@ -9,13 +9,14 @@
 }
 :root{
     --bg-color: #ffffff;
-    --realbg-color: #dee2e6;
+    --realbg-color: hsl(210, 14%, 95%);
     --heading-color: #000;
     --grey-20: hsl(0, 0%, 20%);
     --grey-35: hsl(0, 0%, 35%);
     --grey-50: hsl(0, 0%, 50%);
     --grey-60: hsl(0, 0%, 60%);
     --grey-75: hsl(0, 0%, 75%);
+    --grey-90: hsl(0, 0%,90%);
     --third-color: #5a2824 ;
     --main-color: #F03F32;
     --big-font: 5rem;
@@ -80,6 +81,9 @@ header{
 }
 .top-btn{
     display: inline-block;
+    /*remove CV button*/
+    display: none;
+
     padding: 9px 30px;
     background: transparent;
     border: 2px solid var(--main-color);
@@ -149,11 +153,12 @@ section{
     background: #39304A;
     margin-right: 22px;
     margin-bottom: 30px;
+    transition: 0.5s;
 }
 .social a:hover{
     transform: scale(1.1);
     background: var(--main-color);
-    transition: 0.5s;
+    
 }
 .ctmbtn{
     display: inline-block;
@@ -262,6 +267,7 @@ header.sticky{
     filter: grayscale(100%);
     transition: 1s;
     cursor: pointer;
+    box-shadow: 10px 10px 0 0 var(--grey-90);
 }
 .single-project:hover *{
     filter: grayscale(0%);
@@ -322,9 +328,9 @@ header.sticky{
     color: var(--bg-color);
 }
 .view-all-projects{
+    margin: 2em 0;
     display: flex;
     justify-content: center;
-    padding: 50px;
 }
 .view-all-projects a{
     padding: 0.7em 2em;
@@ -341,7 +347,109 @@ header.sticky{
     border: 2px solid var(--grey-20);
     color: var(--bg-color);
 }
-
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact{
+    min-height: 120vh;
+    height: fit-content;
+}
+.contact-container{
+    min-height: 70vh;
+}
+.input-container{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.form-input{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 3rem;
+    width: 25rem;
+    border: 1px solid var(--grey-35);
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0.5rem;
+    transition: 0.6s;
+    max-width: 100%;
+}
+.input-container label{
+    padding: 0 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0.75rem;
+    left: 0.5rem;
+    color: var(--grey-20);
+    cursor: text;
+    transition: .6s;
+    font-size: var(--p-font);
+    background: var(--bg-color);
+}
+.input-container textarea{
+    height: 10rem;
+    max-width: 100%;
+}
+.input-container input:not(:placeholder-shown) ~ label,
+.input-container input:focus ~ label{
+    color: var(--main-color);
+    transform: translateX(1rem) translateY(-1.4rem);
+    font-size: calc(var(--p-font)/1.1);
+    padding: 0 10px;
+    background: var(--bg-color);
+    border-right: 1px solid var(--main-color);
+    border-left: 1px solid var(--main-color);
+}
+.input-container input:not(:placeholder-shown),
+.input-container input:focus{
+    border-color: var(--main-color);
+}
+.input-container textarea:valid~ label,
+.input-container textarea:focus ~ label{
+    color: var(--main-color);
+    transform: translateX(10px) translateY(-1.4rem);
+    font-size: calc(var(--p-font)/1.1);
+    padding: 0 10px;
+    background: var(--bg-color);
+    border-right: 1px solid var(--main-color);
+    border-left: 1px solid var(--main-color);
+}
+.input-container textarea:valid,
+.input-container textarea:focus{
+    border-color: var(--main-color);
+}
+.contact-btn{
+    font-size: var(--h4-font);
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    border: 2px solid var(--grey-35);
+    border-radius: 0.1rem;
+    background: var(--bg-color);
+    cursor: pointer;
+    transition: .5s;
+}
+.contact-btn:hover{
+    color: white;
+    background: var(--grey-20);
+    border: 2px solid var(--grey-20);
+}
+.footer-container{
+    background: var(--grey-90);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.social-media a{
+    padding: 0.5rem;
+    color: var(--grey-20);
+    text-decoration: none;
+    font-size: var(--h4-font);
+}
 @media (max-width: 1100px){
     header{
         padding: 12px 3%;
@@ -373,27 +481,28 @@ header.sticky{
     }
     .navlist{
         position: absolute;
-        top: -500px;
+        max-height: 100vh;
+        top: -150vh;
         left: 0;
         right: 0;
         flex-direction: column;
         background: var(--grey-35);
         text-align: right;
-        transition: all .5s;
+        transition: .8s;
         border-radius: 1%;
     }
     .navlist a{
         display: block;
-        padding: 1.2rem;
-        margin: 1.5rem;
+        padding: 3vh;
+        margin: 3vh;
         border-right: 2px solid var(--bg-color);
         color: var(--bg-color);
-        transition: all .5s
+        transition: .5s
     }
     .navlist a:hover{
         background: var(--bg-color);
         color: var(--grey-35);
-        transition: all .5s
+        transition: .5s
     }
     .navlist a::after{
         display: none;

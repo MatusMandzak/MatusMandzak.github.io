@@ -21,6 +21,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#photos">Photos</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="#" class="top-btn">Download CV</a>
@@ -31,20 +32,20 @@
         <div class="home-text">
             <h3>Hello, I'm</h3>
             <h1>Matúš Mandzák</h1>
-            <h5>A Python Developer <span> from Košice</span></h5>
+            <h5>A Developer <span> from Košice</span></h5>
             <p>I'm fjsdhfbdsjfh <br> and dedicated to my work.</p>
             <div class="social">
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-discord"></i></a>
             </div>
-            <a href="#" class="ctmbtn">Contact me</a>
+            <a href="#contact" class="ctmbtn">Contact me</a>
         </div>
         <div class="home-img">
             <img src="img/me.jpg">
         </div>
     </section>
     <div class="wave-border">
-        <svg viewBox="0 0 500 50" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <svg viewBox="0 0 500 100" preserveAspectRatio="none" style="height: 100%; width: 100%;">
             <path d="M0.00,30 C149.99,100.00 271.49,-30 500.00,30 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: var(--realbg-color);"></path>
         </svg>
       </div>
@@ -62,7 +63,7 @@
     </section>
     <div class="wave-border">
         <svg viewBox="0 0 500 100" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-          <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: var(--realbg-color)"></path>
+          <path d="M0.00,30 C149.99,150.00 349.20,-30 500.00,30 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: var(--realbg-color)"></path>
         </svg>
       </div>
     <section class="projects" id="projects">
@@ -94,7 +95,53 @@
 
         </div>
     </section>
-    
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="title-container">
+                <h2 class="about-title">Contact 📧</h2>
+                <div class="about-subtitle">
+                    <p>
+                        Tell me about your available job opportunities or just say hi :)
+                    </p>
+                </div>
+            </div>
+            <div class="contact-container">
+                <form action="https://formspree.io/f/meqvlbao" method="POST">
+                    <div class="input-container">
+                        <input type="text" id="name" name="name" required="" class="form-input" placeholder=" ">
+                        <label for="name">Name</label>
+                    </div>                        
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" required="" class="form-input" placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" id="subject" name="subject" class="form-input" placeholder=" ">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="input-container">
+                        <textarea required="" maxlength="1000" id="message" name="message" class="form-input"></textarea>
+                        <label for="message">Message<br> </label>
+                        <small>
+                        <span id="message-count">1000</span> characters
+                        </small>
+                    </div>
+                    <div>
+                    <button type="submit" class="contact-btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </section>
+      <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-discord"></i></a>
+            </div>
+            <div class="copyright">© built by Matúš Mandzák ♥</div>
+        </div>
+      </footer>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
